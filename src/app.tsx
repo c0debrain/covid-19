@@ -4,6 +4,7 @@ import styled, { ThemeProvider } from 'styled-components/macro'
 import { HashRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
 
 import ResultsPage from './pages/results'
+import Menu from './components/menu'
 import Chatbot from './components/chatbot'
 import { theme } from './theme'
 
@@ -20,6 +21,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <Router>
         <AppContainer>
+          <Menu />
           <Switch>
             <Route exact path="/">
               <Chatbot />
